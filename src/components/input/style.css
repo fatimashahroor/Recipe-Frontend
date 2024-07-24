@@ -1,0 +1,21 @@
+.input {
+    padding:10px;
+}
+
+.orange-color {
+    color: rgb(117, 85, 16);
+}
+
+.input > label {
+    padding: 5px;
+    font-size: 12px;
+}
+
+.input > input {
+    font-size: 13px;
+    border-radius: 20px;
+    padding: 5px;
+    border: none;
+    box-shadow: 0 0 5px rgb(121, 120, 117);
+   
+}

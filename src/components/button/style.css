@@ -1,0 +1,11 @@
+.button {
+    padding: 5px;
+    margin: 5px;
+    color:rgb(117, 85, 16);
+    box-shadow: 0 4px 8px 0 rgba(82, 71, 49, 0.2), 0 6px 20px 0 rgba(187, 95, 9, 0.19);
+    border: none;
+}
+
+.button:hover {
+    color: rgb(255, 145, 0);
+}
