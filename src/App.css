@@ -1,9 +1,24 @@
-.flex {
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.row {
-  flex-direction: row;
+.page {
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.flex {
+  display: flex;
 }
 
 .column {
@@ -11,52 +26,60 @@
 }
 
 .center {
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+
+.backgroundColor {
+  background-color: #ffe0cc; 
 }
 
 .rounded {
-  border-radius: 20px;
+  border-radius: 8px;
 }
 
-.bold {
-  font-weight: bold;
+h1, h2 {
+  text-align: center;
 }
 
-.grow {
-  flex-grow: 1;
+h1 {
+  color: #e67e22; 
+  margin-bottom: 20px;
 }
 
-.wrap {
-  flex-wrap: wrap;
+h2 {
+  color: #d35400; 
+  margin-bottom: 10px;
 }
 
-.clickable {
-  cursor: pointer;
-}
-
-.full-width {
+input {
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #e6e6e6;
+  border-radius: 4px;
   width: 100%;
 }
 
-.full-height {
-  height: 100%;
+input:focus {
+  border-color: #d35400; 
+  outline: none;
 }
 
-.page {
-  background: linear-gradient(0deg, rgb(245, 205, 74) 50%, rgb(250, 183, 60) 100%);
-  width: 100vw;
-  height: 100vh;
+button {
+  background-color: #e67e22;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.half-width {
-  width: 50%;
+button:hover {
+  background-color: #d35400; 
 }
-
-.half-height {
-  height: 50%;
+.errorMsg {
+  color: red;
+  font-size: 0.9em;
+  height: 20px; 
+  text-align: center;
 }
- .backgroundColor {
-   background-color: rgb(245, 221, 143)
- }
-

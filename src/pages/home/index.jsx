@@ -1,12 +1,11 @@
 import "./style.css";
-import Button from "../../components/button";
-import input from "../../components/input";
+import ReviewModal from "../review";
 import React, { useState, useEffect } from "react";
 
 const Home =() => {
     const [recipes, setRecipes] = useState([]);
     const [error, setError] = useState('');
-
+    const [selectedRecipe, setSelectedRecipe] = useState(null);
     useEffect(() => {
         const fetchRecipes = async () => {
             try {
@@ -25,6 +24,9 @@ const Home =() => {
         fetchRecipes();
     }, []);
 
+    const handleReviewClick = (recipeId) => {
+        setSelectedRecipe(recipeId);
+    };
     if (error) {
         return <p>{error}</p>;
     }
@@ -43,11 +45,13 @@ const Home =() => {
                                 <li key={index}>{ingredient}</li>
                             ))}
                         </ul>
+                        <button onClick={() => handleReviewClick(recipe.recipe_id)}>View Reviews</button>
                     </div>
                 ))
             ) : (
                 <p>No recipes found.</p>
             )}
+            {selectedRecipe && <ReviewModal recipeId={selectedRecipe} onClose={() => setSelectedRecipe(null)} />}
         </div>
     );
 };
